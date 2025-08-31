@@ -5,6 +5,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.0.4] – 2025-08-31
+### Added
+- `dockers/druids.me/static/` docker service:
+  - `pre-build.sh`, `post-start.sh`, `post-up.sh`
+  - `docker-compose.yml.tpl`
+  - `Dockerfile`
+  - `local.site.nginx.conf`
+  - `docker-project` (symlink to `../docker-project`)
+- Documentation files:
+  - `dockers/druids.me/static/README.md`
+
+### Changed
+- `CHANGELOG.md`
+- `README.md` updated with examples for **static** project.
+
+---
+
 ## [0.0.3] – 2025-08-31
 ### Added
 - `dockers/druids.me/presale/` docker service:
@@ -18,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 - `CHANGELOG.md`
-- `README.md` updated with examples for running **mailcatcher** and **presale** projects.
+- `README.md` updated with examples for running **presale** project.
 
 ---
 ## [0.0.2] – 2025-08-31
