@@ -5,6 +5,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.0.3] – 2025-08-31
+### Added
+- `dockers/druids.me/presale/` docker service:
+  - `pre-build.sh`, `post-start.sh`, `post-up.sh`
+  - `docker-compose.yml.tpl`
+  - `Dockerfile`
+  - `local.site.nginx.conf`
+  - `docker-project` (symlink to `../docker-project`)
+- Documentation files:
+  - `dockers/druids.me/presale/README.md`
+
+### Changed
+- `CHANGELOG.md`
+- `README.md` updated with examples for running **mailcatcher** and **presale** projects.
+
+---
+## [0.0.2] – 2025-08-31
+### Added
+- Documentation files:
+  - Root `CHANGELOG.md`
+
+---
+
 ## [0.0.1] – 2025-08-08
 ### Added
 - Project initialization

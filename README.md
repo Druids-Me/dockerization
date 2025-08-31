@@ -1,4 +1,4 @@
-# README @ dockerizationportal
+# README @ dockerization
 
 Quick [local development tools based on Bash, Docker, and Docker Compose](https://github.com/grzechowski/dockerization).
 
@@ -13,32 +13,24 @@ Quick [local development tools based on Bash, Docker, and Docker Compose](https:
 Your installation procedure may differ depending on OS.
 
 ### Network Setup
-- Add the configuration lines from [./dockers/dev/hostnames-dockers](./dockers/dev/hostnames-dockers) to your system’s `hosts` file.  
+- Add the configuration lines from [./dockers/druids.me/hostnames-dockers](./dockers/druids.me/hostnames-dockers) to your system’s `hosts` file.  
 - Ensure you are using the **latest version** of these configuration lines.
 
 ### Default Project Group
 By default, the console script assumes the project group `dev`.  
 You can override this by creating a `.env` file next to `console.sh`:
 
-**Current configuration:**
-
-```env
+```bash
 PROJECT_GROUP=druids.me
 ```
 
----
-
-## ⚙️ Usage
-
-To open the project console, run:
-
-```bash
-./console.sh
-```
-
-If the console starts without errors, your dependencies are properly installed and configured.
+This has been already done.
 
 ---
+
+## 🛠️ Utilities
+You can use docker/host helper scripts from the [`scripts/`](./scripts/) directory to manage permissions, reset temporary files, and synchronize hostnames.
+
 
 ## 📨 Example: Mailcatcher
 
@@ -64,6 +56,12 @@ Once running, open your browser at:
 👉 [http://mail.druidsme.dock/](http://mail.druidsme.dock/)  
 
 Mailcatcher can be used with your other Dockerized applications to capture outgoing emails in a safe development environment.
+
+---
+
+### Example Presale Website
+
+- [README](./dockers/druids.me/presale/README.md)  
 
 ---
 
