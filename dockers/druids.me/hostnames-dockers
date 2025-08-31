@@ -1,0 +1,18 @@
+
+#
+# START: druidsme/dockerization dev projects hosts
+#
+
+# mail
+172.16.5.2 mail.druidsme.dock
+
+# Druids.Me
+172.16.5.3 www.druidsme.dock druidsme.dock
+  # planning Laravel, MySQL and Node for backend API
+172.16.5.4 fpm.druidsme.dock  
+172.16.5.5 db.druidsme.dock
+172.16.5.6 node.druidsme.dock
+
+#
+# END: druidsme/dockerization dev projects hosts
+#
