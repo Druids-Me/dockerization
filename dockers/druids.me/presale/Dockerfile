@@ -1,17 +1,24 @@
-FROM nginx:alpine
+# Minimal Node.js + Nginx image
+# Does not automatically install application dependencies – you get a clean environment
 
-ENV TERM xterm
-ENV LANG C.UTF-8
-ENV LC_ALL C.UTF-8
-ENV TZ=Europe/Warsaw
+# Stage 1: Node.js – base for development/build
+FROM node:22-alpine AS base
 
-RUN rm -f /etc/nginx/conf.d/default.conf
-COPY local.site.nginx.conf /etc/nginx/conf.d/default.conf
+ENV TZ=Europe/Warsaw \
+    NODE_ENV=development
 
-# Copy docker helper scripts (fix hosts)
+WORKDIR /workspace
+
+# add nginx
+RUN apk add --no-cache nginx
+
 COPY ./docker /docker
 
-WORKDIR /usr/share/nginx/html
+# Remove default config and add your own SPA (React Router) config
+COPY nginx-react.conf  /etc/nginx/http.d/default.conf
 
-EXPOSE 80
-ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
+# Directory for application files – you will mount or copy them manually
+WORKDIR /druids.me
+
+# EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

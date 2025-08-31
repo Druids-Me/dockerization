@@ -10,6 +10,9 @@ From `dockerization ROOT dir`:
 ./console.sh link presale PATH-TO-REPO-CLONE-druids.me
 ./console.sh build presale
 ./console.sh up presale
+docker exec -it druidsme_presale_1 /bin/sh
+# npm install
+# npm run dev
 ```
 
 ## Now You can open browser

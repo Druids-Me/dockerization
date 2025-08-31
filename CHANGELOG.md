@@ -5,6 +5,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.0.5] – 2025-09-01
+### Added
+- `dockers/druids.me/presale/nginx-react.conf` – new Nginx config for React SPA routing.
+
+### Changed
+- `dockers/druids.me/presale/Dockerfile`:
+  - Switched to multi-stage base with **Node.js 22 Alpine** + Nginx.
+  - Cleaned up environment variables, added proper `WORKDIR`.
+  - Updated config to use `nginx-react.conf` instead of `local.site.nginx.conf`.
+- `dockers/druids.me/presale/README.md`:
+  - Added instructions for container shell, `npm install`, and `npm run dev`.
+- `dockers/druids.me/presale/docker-compose.yml.tpl`:
+  - Updated volume mount from `/usr/share/nginx/html` to `/druids.me`.
+
+### Removed
+- `dockers/druids.me/presale/local.site.nginx.conf` – replaced by `nginx-react.conf`.
+
+---
+
 ## [0.0.4] – 2025-08-31
 ### Added
 - `dockers/druids.me/static/` docker service:
@@ -17,7 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   - `dockers/druids.me/static/README.md`
 
 ### Changed
-- `CHANGELOG.md`
 - `README.md` updated with examples for **static** project.
 
 ---
@@ -34,7 +52,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   - `dockers/druids.me/presale/README.md`
 
 ### Changed
-- `CHANGELOG.md`
 - `README.md` updated with examples for running **presale** project.
 
 ---
