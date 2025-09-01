@@ -1,12 +1,12 @@
 version: '2'
 services:
-  presale:
+  static:
     build: .
     networks:
       default:
         ipv4_address: 172.16.5.3
     volumes:
-      - DEV_REPO_1:/druids.me
+      - DEV_REPO_1:/usr/share/nginx/html
       - ./docker:/docker
 
 networks:

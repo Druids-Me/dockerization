@@ -59,9 +59,19 @@ Mailcatcher can be used with your other Dockerized applications to capture outgo
 
 ---
 
-### Example Presale Website
+## Example Static Website
 
-- [README](./dockers/druids.me/presale/README.md)  
+This is a version consistent with the initial versions of the landing page, left here in case anyone wants to see it. It might also be useful as an example.
+
+- [dockers/druids.me/static/README](./dockers/druids.me/static/README.md)  
+
+**Important:** `static` is in IP/hostname conflict with `presale`, can not run at the same time.
+
+---
+
+## Example Presale Website
+
+- [dockers/druids.me/presale/README](./dockers/druids.me/presale/README.md)  
 
 ---
 
